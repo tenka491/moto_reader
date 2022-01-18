@@ -15,7 +15,16 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+- `cmd + shift + p`
+- Find `Flutter: Launch Emulator`
+- Choose Pixel
+- Then go to Run > Run Without Debugging
+
 ## TODO:
 
-- Set up Android environment
+- Extract API into another file
+- Create Article List Component (use the `infinite_list` sample in the `futter_samples` folder)
+  - Add Img List Component
 - Create the layout
+- Create Logo component
+- Create Refresh button a.k.a. Home button?
