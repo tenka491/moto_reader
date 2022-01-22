@@ -22,9 +22,17 @@ samples, guidance on mobile development, and a full API reference.
 
 ## TODO:
 
-- Extract API into another file
-- Create Article List Component (use the `infinite_list` sample in the `futter_samples` folder)
-  - Add Img List Component
+- Tap Article title event 
+  - ~~MVP default open browser~~
+  - ~~Nice to do: open in app web view~~
+  - Add a close button for "WebView"?
+
+- Mark as Read
+- Add Img List Component
+- Share Article
 - Create the layout
 - Create Logo component
-- Create Refresh button a.k.a. Home button?
+- Create Refresh Function
+  - Pull down to refresh
+  - Home Button to refresh
+- add utm_source to urls

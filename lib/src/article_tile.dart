@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'api/article.dart';
 
@@ -10,49 +11,24 @@ class ArticleTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
-      child: Center(
-        child: ListTile(
-          title: Text(article.title),
-        ),
-      ),
-    );
+        padding: const EdgeInsets.fromLTRB(10, 3, 3, 5),
+        child: GestureDetector(
+          onTap: () {
+            _launchURL();
+          },
+          child: Center(
+            child: ListTile(
+              title: Text(article.title),
+            ),
+          ),
+        ));
+  }
+
+  void _launchURL() async {
+    if (!await launch(
+      article.url,
+      forceSafariVC: true,
+      forceWebView: true,
+    )) throw 'Could not launch $article.url';
   }
 }
-
-
-// List<Widget> children;
-//             if (snapshot.hasData) {
-//               children = <Widget>[ArticleTile(article: snapshot.data![50])];
-//             } else if (snapshot.hasError) {
-//               children = <Widget>[
-//                 const Icon(
-//                   Icons.error_outline,
-//                   color: Colors.red,
-//                   size: 60,
-//                 ),
-//                 Padding(
-//                   padding: const EdgeInsets.only(top: 16),
-//                   child: Text('Error: ${snapshot.error}'),
-//                 )
-//               ];
-//             } else {
-//               children = const <Widget>[
-//                 SizedBox(
-//                   width: 60,
-//                   height: 60,
-//                   child: CircularProgressIndicator(),
-//                 ),
-//                 Padding(
-//                   padding: EdgeInsets.only(top: 16),
-//                   child: Text('Awaiting result...'),
-//                 )
-//               ];
-//             }
-
-//             return Center(
-//               child: Column(
-//                 mainAxisAlignment: MainAxisAlignment.center,
-//                 children: children,
-//               ),
-//             );
