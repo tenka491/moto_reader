@@ -24,8 +24,8 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Pre-Alpha Release TODO:
 
-- Add bottom nav bar
-- Donation Page
+- Add Logos/Icons to Donation page
+- Link icons to social media and donation sites
 - Create Logo component
 - Create Refresh Function
   - Pull down to refresh
@@ -37,11 +37,15 @@ samples, guidance on mobile development, and a full API reference.
 ## TODO:
 
 - Tap Article title event 
-  - ~~MVP default open browser~~
-  - ~~Nice to do: open in app web view~~
   - Add a close button for "WebView"?
 - Mark as Read
 - Add Img List Component
 - Create the layout
 
 - add utm_source to urls
+
+### Done
+- ~~MVP default open browser~~
+- ~~Nice to do: open in app web view~~
+- ~~Add bottom nav bar~~
+- ~~Donation Page~~
