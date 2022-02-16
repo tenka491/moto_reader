@@ -15,10 +15,24 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+- Be sure `moto-reader-api` is running locally or on the server.
 - `cmd + shift + p`
 - Find `Flutter: Launch Emulator`
 - Choose Pixel
 - Then go to Run > Run Without Debugging
+
+
+## Pre-Alpha Release TODO:
+
+- Add bottom nav bar
+- Donation Page
+- Create Logo component
+- Create Refresh Function
+  - Pull down to refresh
+  - Home Button to refresh 
+- Point to released version of the `moto-reader-api`
+- Share Article
+  - where did you share it from? `via Moto-Reader App`
 
 ## TODO:
 
@@ -26,13 +40,8 @@ samples, guidance on mobile development, and a full API reference.
   - ~~MVP default open browser~~
   - ~~Nice to do: open in app web view~~
   - Add a close button for "WebView"?
-
 - Mark as Read
 - Add Img List Component
-- Share Article
 - Create the layout
-- Create Logo component
-- Create Refresh Function
-  - Pull down to refresh
-  - Home Button to refresh
+
 - add utm_source to urls

@@ -17,8 +17,11 @@ class ArticleTile extends StatelessWidget {
             _launchURL();
           },
           child: Center(
+            // ignore: todo
+            // TODO: Update the styling of this tile.
             child: ListTile(
               title: Text(article.title),
+              tileColor: Colors.grey,
             ),
           ),
         ));
@@ -29,6 +32,7 @@ class ArticleTile extends StatelessWidget {
       article.url,
       forceSafariVC: true,
       forceWebView: true,
+      enableJavaScript: true,
     )) throw 'Could not launch $article.url';
   }
 }

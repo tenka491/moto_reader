@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter_start_app/src/articlesBuiler.dart';
 import 'package:flutter_start_app/src/articles_list.dart';
+import 'package:flutter_start_app/src/donation_page/donations.dart';
 
 import 'src/api/article.dart';
 import 'src/api/fetch.dart';
@@ -35,29 +37,49 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final Future<List<Article>> _futureArticles = Future<List<Article>>.delayed(
-    const Duration(seconds: 3),
-    () => fetchAllArticles(),
-  );
+  // final Future<List<Article>> _futureArticles = Future<List<Article>>.delayed(
+  //   const Duration(seconds: 3),
+  //   () => fetchAllArticles(),
+  // );
+
+  int _selectedIndex = 0;
+
+  final List<Widget> _widgetOptions = <Widget>[
+    const ArticlesBuilder(),
+    const Donations(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: SafeArea(
-        child: FutureBuilder<List<Article>>(
-          future: _futureArticles,
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              return ArticlesList(articles: snapshot.data!);
-            } else {
-              return const Center(child: CircularProgressIndicator());
-            }
-          },
+        appBar: AppBar(
+          title: Text(widget.title),
         ),
-      ),
-    );
+        body: SafeArea(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.black87,
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.deepOrange[800],
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.monetization_on),
+              label: 'Donate',
+            ),
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ));
   }
 }
