@@ -1,11 +1,7 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_start_app/src/articlesBuiler.dart';
-import 'package:flutter_start_app/src/articles_list.dart';
+import 'package:flutter_start_app/src/articles_builder.dart';
 import 'package:flutter_start_app/src/donation_page/donations.dart';
-
-import 'src/api/article.dart';
-import 'src/api/fetch.dart';
+import 'package:fluttericon/font_awesome5_icons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -70,12 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
           selectedItemColor: Colors.deepOrange[800],
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(FontAwesome5.home),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.monetization_on),
-              label: 'Donate',
+              icon: Icon(FontAwesome5.info_circle),
+              label: 'About',
             ),
           ],
           currentIndex: _selectedIndex,

@@ -37,6 +37,7 @@ dependencies:
   http: ^0.13.4
   async: ^2.8.2
   url_launcher: ^6.0.18
+  fluttericon: ^2.0.0
 
 dev_dependencies:
   flutter_test:
