@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_start_app/src/articles_builder.dart';
-import 'package:flutter_start_app/src/donation_page/donations.dart';
+import 'package:flutter_start_app/src/about_page/about.dart';
 import 'package:fluttericon/font_awesome5_icons.dart';
 
 void main() {
