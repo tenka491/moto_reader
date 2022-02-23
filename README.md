@@ -24,12 +24,9 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Pre-Alpha Release TODO:
 
-- Add Logos/Icons to Donation page
-- Link icons to social media and donation sites
 - Create Logo component
 - Create Refresh Function
   - Pull down to refresh
-  - Home Button to refresh 
 - Point to released version of the `moto-reader-api`
 - Share Article
   - where did you share it from? `via Moto-Reader App`
@@ -45,6 +42,9 @@ samples, guidance on mobile development, and a full API reference.
 - add utm_source to urls
 
 ### Done
+- ~~Home Button to refresh~~
+- ~~Add Logos/Icons to Donation page~~
+- ~~Link icons to social media and donation sites~~
 - ~~MVP default open browser~~
 - ~~Nice to do: open in app web view~~
 - ~~Add bottom nav bar~~
