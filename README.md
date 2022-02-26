@@ -28,17 +28,14 @@ samples, guidance on mobile development, and a full API reference.
 - Create Refresh Function
   - Pull down to refresh
 - Point to released version of the `moto-reader-api`
-- Share Article
-  - where did you share it from? `via Moto-Reader App`
+- Add Img List Component
 
 ## TODO:
 
-- Tap Article title event 
-  - Add a close button for "WebView"?
+- Add a close button for "WebView"?
 - Mark as Read
-- Add Img List Component
-- Create the layout
-
+- Share Article
+  - where did you share it from? `via Moto-Reader App`
 - add utm_source to urls
 
 ### Done
